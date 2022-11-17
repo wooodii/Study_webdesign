@@ -8,8 +8,6 @@ img{vertical-align: top;}
 
 .wrap{position:relative; width: 1200px; height: 700px; margin: 0 auto;}
 /* popUpBox ---------------------------------------------------------------------------------------------------*/
-/* 딤이 필요할 경우 popUpBg 추가 */
-.popUpBg{position:fixed; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index:998; display: none;}
 .popUpBox{position:absolute; width: 100%; height: 100%; z-index:999; display: none;}
 .popUp{position:absolute; width:600px; left:50%; top:50%; transform: translate(-50%, -50%); 
     text-align: center; line-height: 2; border: 1px solid #000; background: #fff; padding:20px;}
@@ -18,50 +16,51 @@ img{vertical-align: top;}
 .popUp button{float: right; padding:4px; cursor: pointer;}
 
 /*header -----------------------------------------------------------------------------------------------------*/
-header{position:relative; display: flex; height: 100px; align-items: center;}
+header{position:relative;}
+header, footer{display: flex; height: 100px; align-items: center;}
+.headerBg{position:absolute; width: 100%; height: 123px; left:0; top:100px; background: rgb(228, 89, 89); z-index: 997; display: none;}
 header h1{display: block; width: 200px; height: 40px; font-size: 0px; color:transparent;}
 
-.headerBg{position:absolute; width: 100%; height: 125px; left:0; top:100px; background: rgb(98, 172, 83); z-index: 996; display: none;}
-header h1 a{display: block; width: 200px; height: 40px;}
-
 header nav{width: 600px; margin: 58px 0px 0px 370px;}
-header nav >ul{display: flex; }
+header nav >ul{display: flex;}
 header nav ul a{display: block; text-align: center; background: #fff; padding:10px;}
 
 li.lv1{position:relative; width: 25%;}
 li.lv1 >a{font-size: 18px; font-weight: 600;}
-ul.lv2{position:absolute; width: 100%; z-index: 997; display: none;}
-ul.lv2 a{color:#fff; background: rgb(98, 172, 83);}
+ul.lv2{position:absolute; width: 100%; z-index:998; display: none;}
+ul.lv2 li a{color:#fff; background: rgb(228, 89, 89);}
 
-li.lv1:hover >a{color:#fff; background: rgb(31, 122, 39);}
+li.lv1:hover >a{color:#fff; background: rgb(204, 57, 57);}
 ul.lv2 li:hover a{color:#333; background: #fff;}
 
 /*slideContainer -----------------------------------------------------------------------------------------------------*/
-.slideContainer{height: 300px; overflow: hidden;}
-.slideWrap{width: 300%;}
-.slide{position:relative; float: left;}
-.slide p{position:absolute; left:0; top:0; background: rgb(98, 172, 83); padding:10px;}
+.slideContainer{width: 1200px; height: 300px;}
+.sldieWrap{position:relative;}
+.slide{position:absolute;}
+.slide p{position:absolute; left:0; top:0; background: rgb(255, 128, 128); padding:10px 20px;}
 
 /*content -----------------------------------------------------------------------------------------------------*/
-.content{display: flex; height: 200px;}
+.content{display: flex;}
 .content >*{width: 400px;}
+
 .notice, .gallery{padding:10px;}
 .content h3{font-size: 18px; font-weight: 600; margin-bottom: 10px;}
-
-.notice li{display: flex; line-height: 2.2;}
-.notice li a{display: inline-block; width: 250px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.notice li{display: flex; line-height: 2;}
+.notice li a{display: inline-block; width: 250px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
 .notice li span{margin-left: auto;}
-.notice li:hover{background: rgb(89, 226, 100);}
+.notice li:hover{background: rgb(253, 181, 181);}
 
 .gallery ul{display: flex; justify-content: space-between;}
-.gallery li{display: inline-block; width: 32%; margin-top: 12px;}
+.gallery li{display: inline-block; width: 32%;}
+.gallery li a img{width: 100%; opacity: 0.8;}
+.gallery li a img:hover{opacity: 1;}
 
-.banner{position:relative;}
-.banner h2{position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); font-size: 18px; font-weight: 600; background: #fff; padding:10px;}
-
+.link{position:relative;}
+.link h2{position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); font-size: 18px; font-weight: 600; background: #fff; padding:10px;}
 
 /*footer -----------------------------------------------------------------------------------------------------*/
-footer{display: flex; height: 100px; align-items: center;}
-footer .footerLogo{display: block; width: 200px; height: 40px; font-size: 0px; color:transparent;}
-footer p{width: 70%; text-align: center;}
-
+footer{display: flex; height: 100px; text-align: center;}
+footer .bottomLeft{width: 90%;}
+.bottomLeft >*{height: 50%; line-height: 50px;}
+.bottomMenu{display: flex; justify-content: space-around;}
+.familySite{line-height: 100px;}

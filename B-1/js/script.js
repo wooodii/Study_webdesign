@@ -1,18 +1,18 @@
 $(function(){
 
     //header menu------------------------------------
-    $('header nav >ul').mouseenter(function(){
+    $('li.lv1').mouseenter(function(){
         $('ul.lv2, .headerBg').stop().slideDown()
     })
-    $('header nav >ul').mouseleave(function(){
+    $('li.lv1').mouseleave(function(){
         $('ul.lv2, .headerBg').stop().slideUp()
     })
     
     //slide------------------------------------
     setInterval(function(){
-        $('.slideWrap').animate({'margin-left':'-100%'},function(){
+        $('.slideWrap').animate({'marginLeft':'-100%'}, function(){
             $('.slide:first').appendTo('.slideWrap')
-            $('.slideWrap').css({'margin-left':'0%'})
+            $('.slideWrap').css({'marginLeft':'0'})
         })
     },3000)
     

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/* common ----------------------------------------------------------------------------------------- */
+*{padding:0; margin:0; box-sizing: border-box; color:#333333; font-family: "맑은 고딕",sans-serif;}
+li{list-style: none;}
+a{text-decoration: none; color:inherit;}
+
+/* header ----------------------------------------------------------------------------------------- */
+header{width: 100%; height: 100px; background: rgb(163, 234, 255);}
+.inner{display: flex; align-items: center; width: 1200px; height: 100px; margin: 0 auto;}
+header .inner{position:relative;}
+.headerBg{position:absolute; left:0; top:100px; width: 100%; height: 165px; background: rgb(140, 222, 247); z-index:997; display: none;}
+header h1{width: 200px; height: 40px; font-size: 0px; color:transparent;}
+header nav >ul{display: flex; width: 600px; margin: 58px 0 0 320px;}
+header nav a{display: block; text-align: center; background: #fff; padding:10px;}
+
+li.lv1{position:relative; width: 25%;}
+li.lv1 >a{font-size: 18px; font-weight: 600;}
+ul.lv2{position:absolute; width: 100%; z-index:998; display: none;}
+ul.lv2 li a{ background: rgb(140, 222, 247);}
+li.lv1:hover >a{color:#fff; background: rgb(60, 181, 218);}
+ul.lv2 li:hover a{color:#333333; background: #fff;}
+
+.popUpBg{position:fixed; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index:998; display: none;}
+.main{position:relative; width: 1200px; height: 500px; margin: 0 auto;}
+/* popUpBox ---------------------------------------------------------------------------------------------------*/
+.popUpBox{position:absolute; width: 100%; height: 100%; z-index:999; display: none;}
+.popUp{position:absolute; width:600px; left:50%; top:50%; transform: translate(-50%, -50%); 
+    text-align: center; line-height: 2; border: 1px solid #000; background: #fff; padding:20px;}
+.popUp p{font-size: 15px; margin-top: 10px;}
+.popUp div{margin-top: 30px;}
+.popUp button{float: right; padding:4px; cursor: pointer;}
+
+/*slideContainer -----------------------------------------------------------------------------------------------------*/
+.slideContainer{width: 1200px; height: 300px; overflow: hidden;}
+.slideWrap{width: 300%;}
+.slide{position:relative; float: left;}
+.slide p{position:absolute; left:0; top:0; background: rgb(140, 222, 247); padding:10px;}
+
+.content{display: flex;}
+.content >*{width: 400px; height: 200px;}
+
+.notice, .gallery{padding:10px;}
+.notice h3, .gallery h3{font-size: 18px; font-weight: 600; margin-bottom: 10px;}
+.notice li{display: flex; line-height: 2;}
+.notice li a{display: inline-block; width: 250px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+.notice li span{margin-left: auto;}
+.notice li:hover{background: rgb(199, 236, 247);}
+
+.gallery li{display: inline-block; width: 32%;}
+.gallery img{width: 100%;}
+
+.banner{position:relative;}
+.banner h2{position:absolute; left:50%; top:50%; transform: translate(-50%, -50%); font-size: 18px; font-weight: 600; background: #fff; padding:10px;}
+
+/* footer ------------------------------------------------------------------------------------ */
+footer{display: flex; align-items: center; width: 100%; height: 100px; background: rgb(163, 234, 255);}
+.bottomLeft{display: flex; flex-wrap: wrap; width: 90%; text-align: center;}
+.bottomLeft >*{width: 100%; height: 50px; line-height: 50px;}
+.bottomMenu li{display: inline-block; width: 30%;}
+
+
